@@ -20,10 +20,10 @@ Deverá haver uma página mostrando a listagem das músicas por data salva no st
 
 As listas podem ser deletadas.
 
-## Apis recomendadas
+## Apis utilizadas
 
 - [https://openweathermap.org/current](https://openweathermap.org/current)
-- [https://rapidapi.com/apidojo/api/shazam](https://rapidapi.com/apidojo/api/shazam)
+- [https://rapidapi.com/deezerdevs/api/deezer-1](https://rapidapi.com/deezerdevs/api/deezer-1)
 
 ## Diferenciais
 
