@@ -1,0 +1,15 @@
+header, .logo, .city, .wrapperLatElong, .button, .cidadePesquisada {
+  display: flex;
+  justify-content: center;
+  margin: 1.5em;
+  align-items: center;
+}
+
+.latitude, .longtitude {
+  margin: 1.2em;  
+}
+
+.cidadePesquisada {
+  width: 40%;
+  margin: auto
+}
