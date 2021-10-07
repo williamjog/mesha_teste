@@ -10,7 +10,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
 
-const ListaDeMusicas = () => {
+const ListaDeMusicasSugeridas = () => {
   const { musicas, estilo, setMusicas, pesquisando, setPesquisando } = useContext(Context);
 
   useEffect(() => {
@@ -64,4 +64,4 @@ const ListaDeMusicas = () => {
   ) : '');
 }
 
-export default ListaDeMusicas
+export default ListaDeMusicasSugeridas

@@ -3,7 +3,7 @@ import CidadeInput from './components/CidadeInput';
 import LatitudeELongitudeInput from './components/LatitudeELongitudeInput';
 import BotaoPesquisar from './components/BotaoPesquisar';
 import TabelaCidadePesquisada from './components/TabelaCidadePesquisada';
-import ListaDeMusicas from './components/ListaDeMusicas';
+import ListaDeMusicasSugeridas from './components/ListaDeMusicasSugeridas';
 import BotaoSalvarListadeMusicas from './components/BotaoSalvarListadeMusicas';
 import ListaDeMusicasLocalStorage from './components/ListaDeMusicasLocalStorage';
 import Logo from './images/mesha_logo.png'
@@ -13,12 +13,7 @@ const App = () => {
   return (
     <div className="main">
       <div className="logo">
-        <img
-          src={Logo}
-          alt="Mesha Logo"
-          width="150"
-          height="150"
-        />
+        <img src={Logo} alt="Mesha Logo" width="150" height="150"/>
       </div>
       <header>
         <h1>Bem vindo ao MeshaPlayList Suggestion!</h1>
@@ -27,7 +22,7 @@ const App = () => {
       <LatitudeELongitudeInput />
       <BotaoPesquisar />
       <TabelaCidadePesquisada />
-      <ListaDeMusicas />
+      <ListaDeMusicasSugeridas />
       <BotaoSalvarListadeMusicas />
       <ListaDeMusicasLocalStorage />
     </div>
