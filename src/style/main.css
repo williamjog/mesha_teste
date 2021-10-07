@@ -1,15 +1,32 @@
-header, .logo, .city, .wrapperLatElong, .button, .cidadePesquisada {
+header, .logo, .city, .wrapperLatElong, .button, .cidadePesquisada, .musicTitle, .cardWrapper, .listasSalvas, .listasSalvasTitulo, .infoTitleIndividual, .tituloCard, .deleteButton {
   display: flex;
   justify-content: center;
   margin: 1.5em;
   align-items: center;
+  flex-wrap: wrap
 }
 
 .latitude, .longtitude {
   margin: 1.2em;  
 }
 
-.cidadePesquisada {
+.cidadePesquisada, .musicasSugeridas {
   width: 40%;
   margin: auto
+}
+
+
+.musicasSugeridas, .tituloCard {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-family: "PlusJakartaSans-Bold",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.infoMusica, .listasSalvasTitulo, .infoTitleIndividual {
+  display: flex;
+  justify-content: center;
+  font-family: "PlusJakartaSans-Bold",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-weight: 500;
+  font-size: 23px;
 }

@@ -11,13 +11,13 @@ const BotaoPesquisar = () => {
     const definirEstiloMusical = () => {
       if (temperatura) {
         if (temperatura > 32) {
-          setEstilo('Rock');
+          setEstilo('rock');
         } else if (temperatura < 32 && temperatura > 24) {
-          setEstilo('Pop');
+          setEstilo('pop');
         } else if (temperatura < 24 && temperatura > 16) {
-          setEstilo('Classica')
+          setEstilo('classica')
         } else {
-          setEstilo('Lofi');
+          setEstilo('lofi');
         }
       }
     };

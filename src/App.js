@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
 import CidadeInput from './components/CidadeInput';
 import LatitudeELongitudeInput from './components/LatitudeELongitudeInput';
 import BotaoPesquisar from './components/BotaoPesquisar';
 import TabelaCidadePesquisada from './components/TabelaCidadePesquisada';
+import ListaDeMusicas from './components/ListaDeMusicas';
+import BotaoSalvarListadeMusicas from './components/BotaoSalvarListadeMusicas';
+import ListaDeMusicasLocalStorage from './components/ListaDeMusicasLocalStorage';
 import Logo from './images/mesha_logo.png'
 import './style/main.css';
 
@@ -24,6 +27,9 @@ const App = () => {
       <LatitudeELongitudeInput />
       <BotaoPesquisar />
       <TabelaCidadePesquisada />
+      <ListaDeMusicas />
+      <BotaoSalvarListadeMusicas />
+      <ListaDeMusicasLocalStorage />
     </div>
   )
 }

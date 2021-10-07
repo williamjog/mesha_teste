@@ -11,6 +11,10 @@ import Paper from '@mui/material/Paper';
 const TabelaCidadePesquisada = () => {
   const { temperatura, cidadePesquisada, estilo } = useContext(Context);
 
+  const colocarPrimeiraLetraEmCaixaAlta = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   return (
     cidadePesquisada ? 
     <div className="cidadePesquisada">
@@ -27,13 +31,13 @@ const TabelaCidadePesquisada = () => {
             <TableRow>
               <TableCell>{cidadePesquisada}</TableCell>
               <TableCell>{temperatura} ºC</TableCell>
-              <TableCell>{estilo}</TableCell>
+              <TableCell>{colocarPrimeiraLetraEmCaixaAlta(estilo)}</TableCell>
             </TableRow>
           </TableBody>
         </Table>
       </TableContainer>
     </div>
-     : ''
+     : <span></span>
   )
 }
 
