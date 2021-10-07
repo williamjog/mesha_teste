@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import MusicasDaListaSalva from './MusicasDaListaSalva';
+import MusicasSalvasDaLista from './MusicasSalvasDaLista';
 import Context from '../context/Context';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 
 
 const ListaDeMusicasLocalStorage = () => {
-  const { listasSalvas, setListasSalvas, pesquisando, setPesquisando } = useContext(Context);
+  const { listasSalvas, setListasSalvas, setPesquisando } = useContext(Context);
 
   let numeroDeListas = Number(JSON.parse(localStorage.getItem('NumeroDeListas')));
 
@@ -52,7 +52,6 @@ const ListaDeMusicasLocalStorage = () => {
   }, [numeroDeListas, setListasSalvas]);
 
   return (
-    !pesquisando ? (
       <div>
         <div className="listasSalvasTitulo">Listas Salvas</div>
         <div className="cardWrapper">
@@ -75,10 +74,15 @@ const ListaDeMusicasLocalStorage = () => {
                       <Typography variant="h5" component="div">
                         { `Data: ${lista.data}` }
                       </Typography> </div>
-                  </div>
+                   </div>
+                   <div className="infoTitleIndividual">                    
+                      <Typography variant="h5" component="div">
+                        { `Temperatura: ${lista.temperatura} ºC` }
+                      </Typography>
+                   </div>
                   <div className="">
                     <Typography variant="h6" component="div">
-                      <MusicasDaListaSalva musicas={lista} indice={index} />
+                      <MusicasSalvasDaLista lista={lista} indice={index} />
                     </Typography>
                   </div>
                 </CardContent>
@@ -99,7 +103,6 @@ const ListaDeMusicasLocalStorage = () => {
           ))}
         </div>
       </div>
-    ) : <span></span>
   )
 }
 
