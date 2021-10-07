@@ -16,21 +16,30 @@ const ListaDeMusicasLocalStorage = () => {
     if (string) return string.charAt(0).toUpperCase() + string.slice(1);
   };
 
-  const removerLista = (numeroDaLista) => {
-    const listasRestantes = [];
-    localStorage.removeItem(`Lista${numeroDaLista}`);
-    numeroDeListas--;
+  const limparLocalStorage = (numeroDaLista, listasRestantes) => {
     for (let i = 1; i <= numeroDeListas + 1; i++) {
+      if (numeroDeListas < 1) {
+        localStorage.removeItem(`Lista${i}`);
+        localStorage.removeItem('NumeroDeListas');
+        continue;
+      }
       if (i !== Number(numeroDaLista)) {
         listasRestantes.push(JSON.parse(localStorage.getItem(`Lista${i}`)));
         localStorage.removeItem(`Lista${i}`);
         localStorage.removeItem('NumeroDeListas');
       }
     }
+  }
+
+  const removerLista = (numeroDaLista) => {
+    const listasRestantes = [];
+    localStorage.removeItem(`Lista${numeroDaLista}`);
+    numeroDeListas--;
+    limparLocalStorage(numeroDaLista, listasRestantes);
     setListasSalvas(listasRestantes);
-    for (let i = 1; i <= listasRestantes.length; i++) {
-      localStorage.setItem(`Lista${i}`, JSON.stringify(listasRestantes[i-1]));
-      localStorage.setItem('NumeroDeListas', i);
+    for (let i = 0; i < listasRestantes.length; i++) {
+      localStorage.setItem(`Lista${i+1}`, JSON.stringify(listasRestantes[i]));
+      localStorage.setItem('NumeroDeListas', i + 1);
     }
     setPesquisando(true)
   }

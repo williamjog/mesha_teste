@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MusicasSalvasDaLista = ({ lista }) => {
+const   MusicasSalvasDaLista = ({ lista }) => {
   
   return (
     <div>
@@ -9,7 +9,7 @@ const MusicasSalvasDaLista = ({ lista }) => {
       </div>
       { lista.musicas && lista.musicas.map((musica, index) => (
         <div key={index}> 
-          <div> 
+          <div className="musicWrapper"> 
             <span className="infoMusica">
               {`${musica.titulo} | Artista: ${musica.artista}`}
             </span>

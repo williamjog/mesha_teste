@@ -1,6 +1,7 @@
 * {
   margin: 0;
 }
+
 header, .logo, .city, .wrapperLatElong, .button, .cidadePesquisada, .musicTitle, .cardWrapper, .listasSalvas, .listasSalvasTitulo, .infoTitleIndividual, .tituloCard, .deleteButton {
   display: flex;
   justify-content: center;
