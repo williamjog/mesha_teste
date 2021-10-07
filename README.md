@@ -8,8 +8,8 @@
 ## Descrição do projeto
 
 - Acesse a página do projeto em: https://meshateste.herokuapp.com/
-Dada uma localização (Cidade, latitude, longitude, etc) a aplicação deverá buscar na API de tempo (Weather API ou afins) a temperatura relativa da localização e assim que retornada a resposta deverá ser solicitada para à API de músicas (Shazam API ou afins) a lista de músicas recomendadas para o clima atual.
 
+Dada uma localização (Cidade, latitude, longitude, etc) a aplicação deverá buscar na API de tempo (Weather API ou afins) a temperatura relativa da localização e assim que retornada a resposta deverá ser solicitada para à API de músicas (Shazam API ou afins) a lista de músicas recomendadas para o clima atual.
 - Caso a temperatura seja maior que 32 graus, deverá retornar Rock;
 - Caso a temperatura seja menor que 32 e maior 24, deverá retornar Pop;
 - Caso a temperatura seja menor que 24 e maior que 16, devera retornar Classica;
