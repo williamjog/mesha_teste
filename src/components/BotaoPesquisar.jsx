@@ -25,14 +25,14 @@ const BotaoPesquisar = () => {
   }, [cidadePesquisada, setEstilo, temperatura]);
 
   const buscarPorCidade = async (cidade) => {
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${process.env.REACT_APP_API_KEY}&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${process.env.REACT_APP_API_KEY}&units=metric`;
     const data = await axios.get(url).then(response => response.data);
     setTemperatura(data.main.temp);
     setCidadePesquisada(data.name);
   }
 
   const buscarPorLatitudeELongitude = async (latitude, longitude) => {
-    const url = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${process.env.REACT_APP_API_KEY}&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${process.env.REACT_APP_API_KEY}&units=metric`;
     const data = await axios.get(url).then(response => response.data);
     setTemperatura(data.main.temp);
     setCidadePesquisada(data.name);
