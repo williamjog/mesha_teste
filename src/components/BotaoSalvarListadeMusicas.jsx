@@ -22,7 +22,6 @@ const BotaoSalvarListadeMusicas = () => {
         duracao: musica.duracao
       };
       if (index < 5) listaMusica.push(music);
-      return music;
     })
     return listaMusica;
   };
