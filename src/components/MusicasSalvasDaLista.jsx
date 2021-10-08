@@ -1,7 +1,6 @@
 import React from 'react'
 
-const   MusicasSalvasDaLista = ({ lista }) => {
-  
+const MusicasSalvasDaLista = ({ lista }) => { 
   return (
     <div>
       <div className="tituloCard">

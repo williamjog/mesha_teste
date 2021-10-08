@@ -61,14 +61,14 @@ const ListaDeMusicasLocalStorage = () => {
 
   return (
       <div>
-        <div className="listasSalvasTitulo">Listas Salvas</div>
+        <span className="listasSalvasTitulo">Listas Salvas</span>
         <div className="cardWrapper">
           { listasSalvas && listasSalvas.map((lista, index) => (
             <div className="cardWrapper" key={index}> 
               <Card sx={{ minWidth: 600, minHeight: 600 }}>
                 <CardContent>
                   <div>
-                    <div className="infoTitleIndividual">                    
+                    <div className="infoTitleIndividual">
                       <Typography variant="h5" component="div">
                         {`Lista ${index + 1}`}
                       </Typography>
@@ -97,13 +97,13 @@ const ListaDeMusicasLocalStorage = () => {
                 <div className="deleteButton"> 
                   <CardActions>
                     <Button 
-                    size="large"
-                    color="primary"
-                    style={{backgroundColor: '#9370DB', color: '#FFFFFF'}}
-                    onClick={ () => removerLista(`${index+1}`)}
+                      size="large"
+                      color="primary"
+                      style={{backgroundColor: '#9370DB', color: '#FFFFFF'}}
+                      onClick={ () => removerLista(`${index+1}`)}
                     >
                       Deletar
-                  </Button>
+                   </Button>
                   </CardActions>
                 </div>
              </Card>
