@@ -28,7 +28,6 @@ header, .logo, .city, .wrapperLatElong, .button, .cidadePesquisada, .musicTitle,
   margin: auto
 }
 
-
 .musicasSugeridas, .tituloCard {
   font-size: 1.25rem;
   line-height: 1.5;
