@@ -48,13 +48,13 @@ const ListaDeMusicasSugeridas = () => {
           </TableHead>
           <TableBody>
           {musicas && musicas.map((musica, index) => (
-            index < 5 ? (
+            index < 5 && (
             <TableRow key={musica.id}>
               <TableCell>{musica.title}</TableCell>
               <TableCell>{musica.artist.name}</TableCell>
               <TableCell>{musica.duration} s</TableCell>
             </TableRow>
-            ) : <tr key={musica.id}></tr>
+            )
           ))}
           </TableBody>
         </Table>
