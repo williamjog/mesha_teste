@@ -13,35 +13,40 @@ const BotaoSalvarListadeMusicas = () => {
     return dia+"/"+mes+"/"+ano;
   };
 
-  const montarListaLocalStorage = () => {
+  const montarListaDeMusicas = () => {
     const listaMusica = [];
     musicas.forEach((musica, index) => {
-      const music = {
-        titulo: musica.title,
-        artista: musica.artist.name,
-        duracao: musica.duracao
-      };
-      if (index < 5) listaMusica.push(music);
-    })
+      if (index < 5) {
+        const music = {
+          titulo: musica.title,
+          artista: musica.artist.name,
+          duracao: musica.duracao
+        };
+        listaMusica.push(music);
+      } 
+    });
     return listaMusica;
   };
 
-  const salvarListaLocalStorage = () => {
-    const numeroDeListas = Number(JSON.parse(localStorage.getItem('NumeroDeListas')));
-    const dadosDoLocalStorage = {
+  const estruturaDaListaSalva = () => {
+    return  {
       data: dataAtualFormatada(),
-      musicas: montarListaLocalStorage(),
+      musicas: montarListaDeMusicas(),
       temperatura,
       cidade,
       estilo
     };
+  }
+
+  const salvarListaLocalStorage = () => {
+    const numeroDeListas = Number(JSON.parse(localStorage.getItem('NumeroDeListas')));
     if (numeroDeListas < 1) {
-      localStorage.setItem('Lista' + 1, JSON.stringify(dadosDoLocalStorage));
+      localStorage.setItem('Lista' + 1, JSON.stringify(estruturaDaListaSalva()));
       localStorage.setItem('NumeroDeListas', 1);
       setPesquisando(true)
     } else {
       const novoNumeroDeLista = Number(numeroDeListas) + 1;
-      localStorage.setItem('Lista' + novoNumeroDeLista, JSON.stringify(dadosDoLocalStorage))
+      localStorage.setItem('Lista' + novoNumeroDeLista, JSON.stringify(estruturaDaListaSalva()))
       localStorage.setItem('NumeroDeListas', novoNumeroDeLista);
       setPesquisando(true)
     }
