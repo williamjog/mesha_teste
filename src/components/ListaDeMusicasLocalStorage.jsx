@@ -54,6 +54,7 @@ const ListaDeMusicasLocalStorage = () => {
         const lista = JSON.parse(localStorage.getItem(`Lista${i+1}`));
         temp.push({
           titulo: `Lista ${i+1}`,
+          cidade: lista.cidade,
           data: lista.data, 
           estilo: lista.estilo,
           musicas: lista.musicas,
@@ -76,8 +77,13 @@ const ListaDeMusicasLocalStorage = () => {
                       <Typography variant="h5" component="div">
                         {`Lista ${index + 1}`}
                       </Typography>
-                   </div>
-                   <div className="infoTitleIndividual">
+                    </div>
+                    <div className="infoTitleIndividual">
+                      <Typography variant="h5" component="div">
+                        {`Cidade: ${colocarPrimeiraLetraEmCaixaAlta(lista.cidade)}`}
+                      </Typography>
+                    </div>
+                    <div className="infoTitleIndividual">
                       <Typography variant="h5" component="div">
                         { `Estilo: ${colocarPrimeiraLetraEmCaixaAlta(lista.estilo)}` }
                       </Typography>
