@@ -31,16 +31,20 @@ const ListaDeMusicasLocalStorage = () => {
     }
   }
 
+  const renovarLocalStorage = (listasRestantes) => {
+    for (let i = 0; i < listasRestantes.length; i++) {
+      localStorage.setItem(`Lista${i+1}`, JSON.stringify(listasRestantes[i]));
+      localStorage.setItem('NumeroDeListas', i + 1);
+    }
+  }
+
   const removerLista = (numeroDaLista) => {
     const listasRestantes = [];
     localStorage.removeItem(`Lista${numeroDaLista}`);
     numeroDeListas--;
     limparLocalStorage(numeroDaLista, listasRestantes);
     setListasSalvas(listasRestantes);
-    for (let i = 0; i < listasRestantes.length; i++) {
-      localStorage.setItem(`Lista${i+1}`, JSON.stringify(listasRestantes[i]));
-      localStorage.setItem('NumeroDeListas', i + 1);
-    }
+    renovarLocalStorage(listasRestantes);
     setPesquisando(true)
   }
 
